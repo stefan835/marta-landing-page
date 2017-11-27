@@ -4,12 +4,16 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Cormorant', serif;
-    color: #323232;
+    color: #6d6d6d;
 }
 
 h1 {
     margin: 0;
     font-size: 2.5em;
+}
+
+h2 {
+    margin: 0;
 }
 
 h4 {
@@ -19,6 +23,7 @@ h4 {
 .home {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .home-img {
@@ -101,7 +106,55 @@ h4 {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.offer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.offer--tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 25px 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    max-width: 200px;
+    text-align: center;
+}
+
+.offer--img {
+    height: 150px;
+    width: 200px;
+}
+
+.offer--header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+
+.section--title {
+    height: 30px;
+    width: 100px;
+    border: 2px #6d6d6d solid;
+    text-align: center;
+}
+
+@media screen and (min-width: 425px) {
+    .offer--tile {
+        max-width: 400px;
+    }
+}
+
 @media screen and (min-width: 768px) {
+
     .home {
         flex-direction: row;
     }
@@ -113,5 +166,60 @@ h4 {
     .menu--item {
         font-size: 18px;
         padding: 20px;
+    }
+
+    .offer {
+        background: no-repeat center url('../img/bed.jpg');
+        background-size: cover;
+    }
+
+    .offer--tiles {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        margin: 20px;
+        text-align: center;
+    }
+
+    .offer--tile {
+        background-color: transparent;
+        margin: auto;
+        border-left: 2px rgba(109, 109, 109, 0.2) solid;
+    }
+
+    .offer--tile:first-child {
+        border: none;
+    }
+
+    .offer--img {
+        height: 150px;
+        width: 200px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .offer--tiles {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        margin: 20px;
+        max-width: 1100px;
+        font-size: 18px;
+    }
+
+    .offer--tile {
+        background-color: transparent;
+        margin: auto;
+        min-height: 500px;
+    }
+
+    .offer--img {
+        height: 200px;
+        width: 300px;
     }
 }
