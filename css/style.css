@@ -91,6 +91,10 @@ h4 {
     transition: all 300ms;
 }
 
+.menu--item:first-child {
+    text-decoration: underline;
+}
+
 .menu--item:hover {
     cursor: pointer;
     color: #000;
