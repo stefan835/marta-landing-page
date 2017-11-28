@@ -43,7 +43,7 @@ h4 {
     background: url('../img/logo.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     flex: 0.9;
 }
 
@@ -75,6 +75,7 @@ h4 {
     justify-content: center;
     align-items: center;
     min-height: 100px;
+    margin-bottom: 50px;
 }
 
 .menu {
@@ -88,6 +89,7 @@ h4 {
 }
 
 .menu--item {
+    font-size: 18px;
     padding: 10px;
     transition: all 300ms;
 }
@@ -172,7 +174,7 @@ h4 {
 }
 
 .portfolio {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,7 +192,7 @@ h4 {
 }
 
 .carousel-inner .carousel-item .d-block .w-100 {
-    height: 70vh;
+    max-height: 70vh;
 }
 
 .carousel-control-next-icon {
@@ -222,7 +224,7 @@ h4 {
 }
 
 .contact {
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
     background: no-repeat center url('../img/contact.jpg');
     background-size: cover;
     color: #fff;
@@ -257,7 +259,7 @@ h4 {
 }
 
 .email {
-    margin-bottom: 170px;
+    margin-bottom: 10%;
     font-size: 18px;
     font-family: 'Lato', serif;
 }
@@ -302,7 +304,7 @@ h4 {
     }
 
     .menu--item {
-        font-size: 18px;
+        font-size: 22px;
         padding: 20px;
     }
 
@@ -326,7 +328,8 @@ h4 {
     .offer--tile {
         background-color: transparent;
         margin: auto;
-        border-left: 2px rgba(109, 109, 109, 0.2) solid;
+        border-left: 3px solid;
+        border-image: url('../img/border.png') 30 stretch;
     }
 
     .offer--tile:first-child {
