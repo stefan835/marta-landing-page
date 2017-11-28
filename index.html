@@ -10,31 +10,30 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
-<div class="container-fluid">
-    <section class="home">
-        <div class="home-img"></div>
-        <div class="home-content">
+<div class="container-fluid main">
+    <section id="home" class="home">
+        <div class="home--img"></div>
+        <div class="home--content">
             <nav>
                 <ul class="menu">
-                    <li class="menu--item">Home</li>
-                    <li class="menu--item">Oferta</li>
-                    <li class="menu--item">Portfolio</li>
-                    <li class="menu--item">Kontakt</li>
+                    <li id="home-link" class="menu--item">Home</li>
+                    <li id="offer-link" class="menu--item">Oferta</li>
+                    <li id="portfolio-link" class="menu--item">Portfolio</li>
+                    <li id="contact-link" class="menu--item">Kontakt</li>
                 </ul>
             </nav>
             <div class="background--logo"></div>
             <header class="name--header">
                 <h1>Marta Wodzińska</h1>
                 <h4>Projektantka wnętrz</h4>
-                <button class="btn">KONTAKT</button>
+                <button id="contact--btn" class="btn">KONTAKT</button>
             </header>
             <div></div>
         </div>
     </section>
-    <section class="offer">
+    <section id="offer" class="offer">
         <div class="header">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="270" height="25">
                 <rect fill="#6d6d6d" width="248" height="2" x="11" y="11"></rect>
@@ -92,7 +91,7 @@
         </div>
         <div></div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="header">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="270" height="25">
                 <rect fill="#6d6d6d" width="248" height="2" x="11" y="11"></rect>
@@ -129,7 +128,7 @@
         </div>
         <div></div>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
         <button class="btn btn-white"><a href="mailto:kontakt@martawodzinska.com">NAPISZ DO MNIE</a></button>
         <div class="email">kontakt@martawodzinska.com</div>
     </section>
@@ -140,14 +139,12 @@
     </div>
 </div>
 <script src="js/jquery-3.2.1.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
         integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
         crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
