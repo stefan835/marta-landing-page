@@ -12,17 +12,31 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container-fluid main">
+<main class="container-fluid main">
     <section id="home" class="home">
         <div class="home--img"></div>
         <div class="home--content">
-            <nav>
-                <ul class="menu">
-                    <li id="home-link" class="menu--item">Home</li>
-                    <li id="offer-link" class="menu--item">Oferta</li>
-                    <li id="portfolio-link" class="menu--item">Portfolio</li>
-                    <li id="contact-link" class="menu--item">Kontakt</li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item menu--item">
+                            <a id="home-link" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item menu--item">
+                            <a id="offer-link" class="nav-link" href="#">Oferta</a>
+                        </li>
+                        <li class="nav-item menu--item">
+                            <a id="portfolio-link" class="nav-link" href="#">Portfolio</a>
+                        </li>
+                        <li class="nav-item menu--item">
+                            <a id="contact-link" class="nav-link" href="#">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
             <div class="background--logo"></div>
             <header class="name--header">
@@ -30,7 +44,7 @@
                 <h4>Projektantka wnętrz</h4>
                 <button id="contact--btn" class="btn">KONTAKT</button>
             </header>
-            <div></div>
+            <span></span>
         </div>
     </section>
     <section id="offer" class="offer">
@@ -50,12 +64,12 @@
                 <img class="offer--img " src="img/idea.jpg" alt="idea"/>
                 <div>
                     <h3>Pomysł</h3>
-                    <div class="offer--content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                    <div class="offer--content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
                         luctus
                         nulla
                         eget eros sagittis luctus. Fusce magna lectus, interdum non luctus ut, vehicula eu orci.
                         Maecenas
-                        venenatis volutpat luctus.
+                        venenatis volutpat luctus.</p>
                     </div>
                 </div>
                 <span></span>
@@ -64,12 +78,12 @@
                 <img class="offer--img" src="img/documentation.jpg" alt="documentation"/>
                 <div>
                     <h3>Dokumentacja</h3>
-                    <div class="offer--content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                    <div class="offer--content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
                         luctus
                         nulla
                         eget eros sagittis luctus. Fusce magna lectus, interdum non luctus ut, vehicula eu orci.
                         Maecenas
-                        venenatis volutpat luctus.
+                        venenatis volutpat luctus.</p>
                     </div>
                 </div>
                 <span></span>
@@ -78,12 +92,12 @@
                 <img class="offer--img" src="img/visualization.jpg" alt="visualization"/>
                 <div>
                     <h3>Wizualizacja</h3>
-                    <div class="offer--content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                    <div class="offer--content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
                         luctus
                         nulla
                         eget eros sagittis luct us. Fusce magna lectus, interdum non luctus ut, vehicula eu orci.
                         Maecenas
-                        venenatis volutpat luctus.
+                        venenatis volutpat luctus.</p>
                     </div>
                 </div>
                 <span></span>
@@ -103,6 +117,7 @@
                 <rect fill="#6d6d6d" width="1000" height="2" x="11" y="11"></rect>
             </svg>
         </div>
+        <h3>Zrealizowane projekty</h3>
         <div class="slider">
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -132,12 +147,10 @@
         <button class="btn btn-white"><a href="mailto:kontakt@martawodzinska.com">NAPISZ DO MNIE</a></button>
         <div class="email">kontakt@martawodzinska.com</div>
     </section>
-    <div class="footer">
-        <img src="img/logo-white.png" alt="logo">
-        <span>Copyrights Marta Wodzińska © 2017</span>
-        <img class="arrow" src="img/arrow.png" alt="arrow"/>
-    </div>
-</div>
+    <footer class="footer">
+        Copyrights Marta Wodzińska © 2017
+    </footer>
+</main>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
         integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"

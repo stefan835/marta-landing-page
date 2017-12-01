@@ -18,8 +18,3 @@ $("#contact-link").click(function () {
     scrollTop: $("#contact").offset().top
   }, 1000);
 });
-$(".arrow").click(function () {
-  $('html, body').animate({
-    scrollTop: $("#home").offset().top
-  }, 1000);
-});
