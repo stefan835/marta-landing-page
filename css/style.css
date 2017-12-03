@@ -153,7 +153,7 @@ h5 {
     justify-content: space-around;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    padding: 5% 2%;
     text-align: center;
     font-family: 'Cormorant', serif;
 }
@@ -196,7 +196,6 @@ h5 {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
     box-sizing: border-box;
 }
 
@@ -206,6 +205,7 @@ h5 {
     justify-content: center;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
+    margin: 0 10px;
 }
 
 .carousel-inner .carousel-item .d-block .w-100 {
@@ -261,13 +261,14 @@ h5 {
     padding: 5px;
     margin: 20px;
     font-weight: 500;
+    line-height: 40px;
 }
 
 .btn-white:hover {
     background-color: rgba(48, 52, 55, 0.5);
 }
 
-a .btn-white {
+.btn-white a {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
@@ -334,6 +335,7 @@ a .btn-white {
         width: 30px;
         height: 30px;
     }
+
     .background--logo {
         top: 30%;
     }
@@ -401,6 +403,7 @@ a .btn-white {
     .offer--tile {
         background-color: transparent;
         margin: auto;
+        padding: 10px;
         border-left: 3px solid;
         border-image: url('../img/border.png') 30 stretch;
     }
