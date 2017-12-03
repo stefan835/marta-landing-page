@@ -77,7 +77,7 @@ h5 {
     background-position: center;
     position: absolute;
     opacity: 0.05;
-    top: 30%;
+    top: 20%;
     z-index: -1;
 }
 
@@ -89,7 +89,7 @@ h5 {
     min-height: 100px;
     margin-bottom: 50px;
     position: absolute;
-    top: 40%;
+    top: 35%;
 }
 
 .menu--item {
@@ -333,6 +333,13 @@ a .btn-white {
     .carousel-control-prev-icon {
         width: 30px;
         height: 30px;
+    }
+    .background--logo {
+        top: 30%;
+    }
+
+    .name--header {
+        top: 40%;
     }
 }
 
