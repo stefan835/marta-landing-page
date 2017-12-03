@@ -143,14 +143,6 @@ h4 {
     box-sizing: border-box;
 }
 
-.offer--tiles {
-    display: none;
-}
-
-.slider--mobile {
-    display: flex;
-}
-
 .offer--tile {
     display: flex;
     flex-direction: column;
@@ -165,7 +157,7 @@ h4 {
 .offer--img {
     height: 150px;
     width: 200px;
-    margin: 5px;
+    margin: 10px;
 }
 
 .header {
@@ -245,7 +237,7 @@ h4 {
 }
 
 .contact {
-    min-height: calc(100vh - 50px);
+    min-height: 100vh;
     background: no-repeat center url('../img/contact.jpg');
     background-size: cover;
     color: #fff;
@@ -383,10 +375,6 @@ h4 {
         opacity: 0.9;
     }
 
-    .slider--mobile {
-        display: none;
-    }
-
     .offer--tiles {
         display: flex;
         flex-direction: row;
@@ -444,10 +432,6 @@ h4 {
     .offer--img {
         height: 200px;
         width: 300px;
-    }
-
-    .slider--mobile {
-        display: none;
     }
 
     .section--title {

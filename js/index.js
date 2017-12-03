@@ -18,6 +18,4 @@ $("#contact-link").click(function () {
     scrollTop: $("#contact").offset().top
   }, 1000);
 });
-window.innerWidth > 768 ? $('section:nth-child(2)').remove() : null;
-$(".main").onepage_scroll();
-
+window.innerWidth > 768 ? $(".main").onepage_scroll() : null;
