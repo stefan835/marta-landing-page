@@ -18,3 +18,5 @@ $("#contact-link").click(function () {
     scrollTop: $("#contact").offset().top
   }, 1000);
 });
+
+$(".main").onepage_scroll();
