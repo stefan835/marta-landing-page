@@ -127,7 +127,7 @@ h5 {
     padding: 10px 30px;
     min-height: 35px;
     border: none;
-    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     margin: 40px;
     transition: all 300ms;
 }
@@ -311,7 +311,7 @@ h5 {
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 3px;
-    padding: 5px 20px;
+    padding: 5px 10px;
     margin: 5px;
     color: #fff;
     width: 100%;
@@ -320,7 +320,7 @@ h5 {
 }
 
 textarea {
-    height: 100px;
+    height: 15vh;
 }
 
 .contact--form input[type=text]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
@@ -351,6 +351,20 @@ textarea {
 
 .arrow:hover {
     transform: translateY(-5px);
+}
+
+.btn-back {
+    border-radius: 3px;
+    font-family: 'Lato', serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    line-height: 35px;
+}
+
+.form-submitted--message {
+    font-family: 'Lato', serif;
+    text-align: center;
 }
 
 .onepage-pagination {

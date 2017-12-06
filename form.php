@@ -2,32 +2,26 @@
 if(isset($_POST['email'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "you@yourdomain.com";
-    $email_subject = "Your email subject line";
+    $email_to = "kontakt@piotr-stefanowicz.pl";
+    $email_subject = "Wiadomość od klienta";
 
     function died($error) {
         // your error code can go here
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
+        echo "Niestety formularz nie został poprawnie wypełniony: ";
         echo $error."<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
+        echo "Popraw błędy i spróbuj ponownie.<br /><br />";
         die();
     }
 
-
     // validation expected data exists
-    if(!isset($_POST['first_name']) ||
-        !isset($_POST['last_name']) ||
+    if(!isset($_POST['name']) ||
         !isset($_POST['email']) ||
         !isset($_POST['telephone']) ||
         !isset($_POST['comments'])) {
-        died('We are sorry, but there appears to be a problem with the form you submitted.');
+        died('Przykro nam ale wystąpił problem z przesłaniem formularza.');
     }
 
-
-
-    $first_name = $_POST['first_name']; // required
-    $last_name = $_POST['last_name']; // required
+    $name = $_POST['name']; // required
     $email_from = $_POST['email']; // required
     $telephone = $_POST['telephone']; // not required
     $comments = $_POST['comments']; // required
@@ -36,42 +30,34 @@ if(isset($_POST['email'])) {
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 
   if(!preg_match($email_exp,$email_from)) {
-    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+    $error_message .= 'Pole zawierające adres email nie zostało poprawnie wypełnione.<br />';
   }
 
     $string_exp = "/^[A-Za-z .'-]+$/";
 
-  if(!preg_match($string_exp,$first_name)) {
-    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
-  }
-
-  if(!preg_match($string_exp,$last_name)) {
-    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
+  if(!preg_match($string_exp,$name)) {
+    $error_message .= 'Pole zawierające imię nie zostało poprawnie wypełnione.<br />';
   }
 
   if(strlen($comments) < 2) {
-    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
+    $error_message .= 'Pole zawierające wiadomość nie zostało poprawnie wypełnione.<br />';
   }
 
   if(strlen($error_message) > 0) {
     died($error_message);
   }
 
-    $email_message = "Form details below.\n\n";
-
+    $email_message = "Treść formularza poniżej.\n\n";
 
     function clean_string($string) {
       $bad = array("content-type","bcc:","to:","cc:","href");
       return str_replace($bad,"",$string);
     }
 
-
-
-    $email_message .= "First Name: ".clean_string($first_name)."\n";
-    $email_message .= "Last Name: ".clean_string($last_name)."\n";
+    $email_message .= "Imię: ".clean_string($name)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";
-    $email_message .= "Telephone: ".clean_string($telephone)."\n";
-    $email_message .= "Comments: ".clean_string($comments)."\n";
+    $email_message .= "Telefon: ".clean_string($telephone)."\n";
+    $email_message .= "Wiadomość: ".clean_string($comments)."\n";
 
 // create email headers
 $headers = 'From: '.$email_from."\r\n".
@@ -81,8 +67,34 @@ $headers = 'From: '.$email_from."\r\n".
 ?>
 
 <!-- include your own success html here -->
-
-Thank you for contacting us. We will be in touch with you very soon.
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marta Wodzińska Design</title>
+    <link rel="icon" href="img/favicon.ico" type="image/gif">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+  <section id="contact" class="contact">
+          <span></span>
+          <div class="contact--content">
+            <h3><span class="form-submitted--message">Dziękuję za kontakt. Postaram się odpowiedzieć najszybciej jak będę mogła.</span></h3>
+            <a class="btn btn-back" href="index.html">Wróć do strony</a>
+          </div>
+              <footer class="footer">
+                      Copyrights Marta Wodzińska © 2017
+                  </footer>
+      </section>
+</main>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
 
 <?php
 
