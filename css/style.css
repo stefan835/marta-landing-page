@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cormorant|Julius+Sans+One|Lato');
+@import url('https://fonts.googleapis.com/css?family=Podkova|Julius+Sans+One|Lato');
 
 body {
     margin: 0;
@@ -10,7 +10,7 @@ body {
 
 h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2.3em;
 }
 
 h2 {
@@ -22,6 +22,7 @@ h2 {
 h3 {
     font-family: 'Julius Sans One', sans-serif;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 h4 {
@@ -53,7 +54,8 @@ h5 {
     order: 1;
     background: url('../img/logo.jpg');
     background-size: cover;
-    background-position: 67%;
+    background-position-x: 67%;
+    background-position-y: 95%;
     min-height: 100vh;
     flex: 0.9;
 }
@@ -125,7 +127,7 @@ h5 {
     padding: 10px 30px;
     min-height: 35px;
     border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.2);
     margin: 40px;
     transition: all 300ms;
 }
@@ -143,7 +145,6 @@ h5 {
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    padding-bottom: 5%;
     box-sizing: border-box;
 }
 
@@ -155,7 +156,7 @@ h5 {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 5% 2%;
     text-align: center;
-    font-family: 'Cormorant', serif;
+    font-family: 'Podkova', serif;
 }
 
 .offer--img {
@@ -170,7 +171,7 @@ h5 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 40px 0 0 0;
+    margin: 40px 0;
     width: 90%;
     max-width: 1100px;
 }
@@ -197,6 +198,7 @@ h5 {
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+    padding: 0 10px;
 }
 
 .slider {
@@ -251,21 +253,28 @@ h5 {
     align-items: center;
 }
 
+.contact--content {
+    padding: 50px 0;
+}
+
 .btn-white {
-    font-family: 'Julius Sans One', sans-serif;
     background-color: transparent;
-    border: 1px #fff solid;
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
-    padding: 5px;
+    border: 2px rgba(255, 255, 255, 0.5) solid;
+    color: rgba(255, 255, 255, 0.8);
+    width: 100px;
+    padding: 2px;
+    font-size: 18px;
     margin: 20px;
     font-weight: 500;
-    line-height: 40px;
+    border-radius: 3px;
+    transition: all 300ms;
+    font-family: 'Podkova', serif;
 }
 
 .btn-white:hover {
-    background-color: rgba(48, 52, 55, 0.5);
+    color: #fff;
+    cursor: pointer;
+    border: 2px rgba(255, 255, 255, 0.8) solid;
 }
 
 .btn-white a {
@@ -278,17 +287,54 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
-.email {
-    font-family: 'Julius Sans One', sans-serif;
-    margin-bottom: 10%;
-    font-size: 18px;
+.contact--form {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 400px;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #212121;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.contact--form input[type=text], textarea {
+    font-family: 'Podkova', serif;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    padding: 5px 20px;
+    margin: 5px;
+    color: #fff;
+    width: 100%;
+    outline: none;
+    overflow: hidden
+}
+
+textarea {
+    height: 100px;
+}
+
+.contact--form input[type=text]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact--form input[type=text]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .footer {
+    font-family: 'Podkova', serif;
     height: 50px;
-    background-color: #303437;
+    background-color: #212121;
     color: #fff;
     text-align: center;
     line-height: 50px;

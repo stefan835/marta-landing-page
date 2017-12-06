@@ -152,14 +152,13 @@
     <section id="contact" class="contact">
         <span></span>
         <div class="contact--content">
-
-            <div class="btn btn-white">
-                <a href="mailto:kontakt@martawodzinska.com">NAPISZ DO MNIE</a>
-            </div>
-
-            <div class="email">
-                <h5>kontakt@martawodzinska.com</h5>
-            </div>
+            <form class="contact--form" name="contactform" method="post" action="index.php">
+                <input type="text" name="first_name" placeholder="Imię*" maxlength="30">
+                <input type="text" name="email" placeholder="Email*" maxlength="30">
+                <input type="text" name="telephone" placeholder="Nr telefonu" maxlength="20">
+                <textarea name="comments" placeholder="Wiadmomość*" maxlength="1000"></textarea>
+                <input class="btn-white" type="submit" value="Wyślij">
+            </form>
         </div>
         <footer class="footer">
             Copyrights Marta Wodzińska © 2017
