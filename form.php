@@ -1,9 +1,3 @@
-<!doctype html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
 <?php
 if(isset($_POST['email'])) {
 
@@ -84,6 +78,3 @@ $headers = 'From: '.$email_from."\r\n".
 
 }
 ?>
-
-</body>
-</html>
