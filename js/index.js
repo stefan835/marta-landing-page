@@ -1,4 +1,7 @@
 window.innerWidth >= 768 ? desktopViewPrepare() : mobileViewPrepare();
+$(window).resize(function () {
+  window.innerWidth >= 768 ? desktopViewPrepare() : mobileViewPrepare();
+});
 
 function mobileViewPrepare() {
   $('.reload--info').remove();
@@ -23,6 +26,18 @@ function mobileViewPrepare() {
       scrollTop: $("#contact").offset().top
     }, 1000);
   });
+  $("section").css({
+    position: 'static',
+    top: 0
+  });
+  $("section:last-child").css({
+    position: 'relative',
+    top: 0
+  });
+  $(".main").css({
+    position: 'static',
+    transform: 'translate3d(0, 0, 0)'
+  });
 }
 
 function desktopViewPrepare() {
@@ -40,3 +55,20 @@ function desktopViewPrepare() {
     $(".main").moveTo(4)
   });
 }
+
+$('.btn-white').click(function () {
+  $('.btn-white').hide();
+  $('form').addClass('contact--form').removeClass('hidden');
+  $('.contact--form').css({
+    opacity: 1
+  });
+});
+
+$('.close').click(function () {
+  $('.contact--form').animate({
+    opacity: 0
+  }, 300, function () {
+    $('form').addClass('hidden');
+    $('.btn-white').show();
+  });
+});

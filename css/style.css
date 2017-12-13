@@ -55,7 +55,7 @@ h5 {
     background: url('../img/logo.jpg');
     background-size: cover;
     background-position-x: 67%;
-    background-position-y: 77%;
+    background-position-y: 73%;
     min-height: 100vh;
     flex: 0.9;
 }
@@ -73,15 +73,15 @@ h5 {
 }
 
 .background--logo {
-    height: 300px;
-    width: 350px;
-    background-image: url("../img/logo-revesed.png");
-    background-size: cover;
-    background-position: center;
+    height: 70vh;
+    width: 40vw;
+    min-width: 300px;
     position: absolute;
-    opacity: 0.05;
-    top: 20%;
     z-index: -1;
+    bottom: 7%;
+    right: -20%;
+    transform: rotate(15deg);
+    border: 10px solid #f5f5f5;
 }
 
 .name--header {
@@ -245,14 +245,23 @@ h5 {
 
 .contact {
     min-height: 100vh;
-    background: no-repeat center url('../img/contact-background.jpg');
-    background-size: cover;
     color: #000;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+}
+
+.contact:before {
+    content: "";
+    min-height: 100vh;
+    padding: 40px;
+    background: no-repeat center url('../img/contact.jpg');
+    background-size: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
 }
 
 .contact--content {
@@ -265,9 +274,29 @@ h5 {
 }
 
 .btn-white {
+    font-family: 'Julius Sans One', sans-serif;
     background-color: transparent;
-    border: 2px rgba(22, 22, 22, 0.5) solid;
-    color: rgba(22, 22, 22, 0.8);
+    border: 1px rgba(255, 255, 255, 0.8) solid;
+    width: 200px;
+    height: 50px;
+    padding: 5px;
+    margin: 20px;
+    font-weight: 800;
+    line-height: 40px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+}
+
+.btn-white:hover {
+    color: #fff;
+    background-color: rgba(48, 52, 55, 0.2);
+    border: 1px #fff solid;
+}
+
+.btn-form {
+    background-color: transparent;
+    border: 1px solid #c8c8c8;
+    color: #808080;
     width: 100px;
     padding: 2px;
     font-size: 18px;
@@ -278,16 +307,10 @@ h5 {
     font-family: 'Podkova', serif;
 }
 
-.btn-white:hover {
-    color: #000;
+.btn-form:hover {
+    color: #212121;
     cursor: pointer;
-    border: 2px #161616 solid;
-}
-
-.btn-white a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
+    border: 1px #858585 solid;
 }
 
 .contact--form {
@@ -297,20 +320,22 @@ h5 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    max-width: 300px;
-    border-radius: 3px;
-    border: 10px solid #161616;
-    background: linear-gradient(0, #9f9f9f, #e7e7e7 60%, #e7e7e7);
+    max-width: 500px;
     box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.8), 0 -20px 60px 0 rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 10%;
+    width: 80%;
+    animation: launch 300ms ease-in-out;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 0.3rem;
+    outline: 0;
 }
 
 .contact--form__input {
     font-family: 'Podkova', serif;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid rgba(22, 22, 22, 0.4);
+    border-bottom: 1px solid #e9ecef;
     border-radius: 3px;
     padding: 5px 10px;
     margin: 5px;
@@ -319,46 +344,39 @@ h5 {
     overflow: hidden;
 }
 
-.contact--form__input + textarea {
-    height: 12vh;
+textarea {
+    min-height: 12vh;
     resize: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.close {
+    align-self: flex-end;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+@keyframes launch {
+    0% {
+        opacity: 0;
+        transform: translateY(0px) scale(0.6)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1)
+    }
 }
 
 .footer {
     font-family: 'Podkova', serif;
-    height: 50px;
     color: #fff;
     text-align: center;
-    line-height: 50px;
     width: 100%;
-    padding: 0 2%;
     box-sizing: border-box;
-    font-size: 14px;
-}
-
-.arrow {
-    cursor: pointer;
-    transition: all 300ms;
-}
-
-.arrow:hover {
-    transform: translateY(-5px);
-}
-
-.btn-back {
-    border-radius: 3px;
-    font-family: 'Lato', serif;
-    font-size: 20px;
-    text-decoration: none;
-    color: #fff;
-    line-height: 35px;
-    background: transparent;
-    border: 1px #fff solid;
-}
-
-.form-submitted--message {
-    font-family: 'Lato', serif;
-    text-align: center;
 }
 
 .onepage-pagination {
@@ -474,6 +492,10 @@ h5 {
     .carousel-control-prev {
         width: auto;
         margin: 0 2%;
+    }
+
+    .contact--form__row {
+        display: flex;
     }
 }
 

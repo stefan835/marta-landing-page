@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato');
+
+* {
+    margin: 0;
+}
+
+.btn {
+    font-family: 'Lato', serif;
+    background-color: #212121;
+    color: #fff;
+    padding: 5px 30px;
+    min-height: 35px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    margin: 40px;
+    transition: all 300ms;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #323232;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-back {
+    border-radius: 3px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    line-height: 35px;
+    background: transparent;
+    border: 1px #fff solid;
+}
+
+.btn-back:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.contact {
+    min-height: 100vh;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.contact:before {
+    content: "";
+    min-height: 100vh;
+    background: no-repeat center url('../img/contact.jpg');
+    background-size: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.contact--content {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer {
+    font-family: 'Podkova', serif;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    width: 100%;
+    padding: 0 2%;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form-submitted--message {
+    font-family: 'Lato', serif;
+    text-align: center;
+}

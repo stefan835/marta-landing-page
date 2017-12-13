@@ -39,7 +39,11 @@
                     </ul>
                 </div>
             </nav>
-            <div class="background--logo"></div>
+            <div class="background--logo">
+                <div class="background--logo">
+                    <div class="background--logo"></div>
+                </div>
+            </div>
             <header class="name--header">
                 <h1>Marta Wodzińska</h1>
                 <h4>Projektantka wnętrz</h4>
@@ -50,13 +54,13 @@
     </section>
     <section id="offer" class="offer">
         <div class="header">
-            <svg class="line-left" xmlns="http://www.w3.org/2000/svg" version="1.0" width="1000" height="25">
+            <svg class="line-left" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000" height="25">
                 <rect fill="#6d6d6d" width="1000" height="2" x="11" y="11"></rect>
             </svg>
             <div class="section--title">
                 <h2>Oferta</h2>
             </div>
-            <svg class="line-right" xmlns="http://www.w3.org/2000/svg" version="1.0" width="1000" height="25">
+            <svg class="line-right" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000" height="25">
                 <rect fill="#6d6d6d" width="1000" height="2" x="11" y="11"></rect>
             </svg>
         </div>
@@ -108,13 +112,13 @@
     </section>
     <section id="portfolio" class="portfolio">
         <div class="header">
-            <svg class="line-left" xmlns="http://www.w3.org/2000/svg" version="1.0" width="1000" height="25">
+            <svg class="line-left" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000" height="25">
                 <rect fill="#6d6d6d" width="1000" height="2" x="11" y="11"></rect>
             </svg>
             <div class="section--title">
                 <h2>Portfolio</h2>
             </div>
-            <svg class="line-right" xmlns="http://www.w3.org/2000/svg" version="1.0" width="1000" height="25">
+            <svg class="line-right" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000" height="25">
                 <rect fill="#6d6d6d" width="1000" height="2" x="11" y="11"></rect>
             </svg>
         </div>
@@ -151,14 +155,24 @@
     </section>
     <section id="contact" class="contact">
         <span></span>
-        <form class="contact--form" name="contactform" method="post" action="form.php">
-            <input class="contact--form__input" type="text" name="name" placeholder="Imię*" required maxlength="30">
-            <input class="contact--form__input" type="email" name="email" placeholder="Email*" required maxlength="30">
-            <input class="contact--form__input" type="text" name="telephone" placeholder="Nr telefonu" maxlength="20">
-            <textarea class="contact--form__input" name="comments" placeholder="Wiadmomość*" required
+        <form class="hidden" name="contactform" method="post" action="form.php">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+            <input class="contact--form__input" type="text" name="name" placeholder="Imię *" required maxlength="30">
+            <div class="contact--form__row">
+                <input class="contact--form__input" type="email" name="email" placeholder="Email *" required
+                       maxlength="30">
+                <input class="contact--form__input" type="text" name="telephone" placeholder="Nr telefonu"
+                       maxlength="20">
+            </div>
+            <textarea class="contact--form__input" name="comments" placeholder="Wiadmomość *" required
                       maxlength="1000"></textarea>
-            <input class="btn-white" type="submit" value="Wyślij">
+            <input class="btn-form" type="submit" value="Wyślij">
         </form>
+        <button class="btn btn-white">
+            NAPISZ DO MNIE
+        </button>
         <footer class="footer">
             Copyrights Marta Wodzińska © 2017
         </footer>
@@ -171,7 +185,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
-<script src="js/jquery.onepage-scroll.min.js"></script>
+<script data-script="true" src="js/jquery.onepage-scroll.min.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>
