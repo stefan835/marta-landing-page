@@ -70,14 +70,11 @@
 
 .footer {
     font-family: 'Podkova', serif;
-    height: 50px;
     color: #fff;
     text-align: center;
-    line-height: 50px;
     width: 100%;
-    padding: 0 2%;
     box-sizing: border-box;
-    font-size: 14px;
+    margin: 5px;
 }
 
 .form-submitted--message {

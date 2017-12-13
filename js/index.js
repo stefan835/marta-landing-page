@@ -62,6 +62,7 @@ $('.btn-white').click(function () {
   $('.contact--form').css({
     opacity: 1
   });
+  $('.contact>span').addClass('modal-background')
 });
 
 $('.close').click(function () {
@@ -69,6 +70,7 @@ $('.close').click(function () {
     opacity: 0
   }, 300, function () {
     $('form').addClass('hidden');
+    $('.contact>span').removeClass('modal-background');
     $('.btn-white').show();
   });
 });

@@ -329,6 +329,7 @@ h5 {
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 0.3rem;
     outline: 0;
+    z-index: 1;
 }
 
 .contact--form__input {
@@ -359,6 +360,13 @@ textarea {
     cursor: pointer;
 }
 
+.modal-background {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+}
+
 @keyframes launch {
     0% {
         opacity: 0;
@@ -377,6 +385,7 @@ textarea {
     text-align: center;
     width: 100%;
     box-sizing: border-box;
+    margin: 5px;
 }
 
 .onepage-pagination {
