@@ -250,14 +250,15 @@ h5 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background: no-repeat center url('../img/contact.jpg');
+    background-size: cover;
 }
 
 .contact:before {
     content: "";
     min-height: 100vh;
     padding: 40px;
-    background: no-repeat center url('../img/contact.jpg');
-    background-size: cover;
+
     position: fixed;
     left: 0;
     right: 0;
